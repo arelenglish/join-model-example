@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Client:</b>
+  <%= @program_attendance.client_id %>
+</p>
+
+<p>
+  <b>Program:</b>
+  <%= @program_attendance.program_id %>
+</p>
+
+<p>
+  <b>Atteneded:</b>
+  <%= @program_attendance.atteneded %>
+</p>
+
+
+<%= link_to 'Edit', edit_program_attendance_path(@program_attendance) %> |
+<%= link_to 'Back', program_attendances_path %>

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @client.name %>
+  <%= @client.programs %>
+  <%= form_for @client do |f| %>
+  	<%= f.collection_select 'program_ids',  Program.all, :id, :name, { :include_blank => ""} %>
+  	<%= f.submit %>
+  <% end %>
+</p>
+
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>

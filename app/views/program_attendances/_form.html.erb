@@ -1,0 +1,29 @@
+<%= form_for(@program_attendance) do |f| %>
+  <% if @program_attendance.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@program_attendance.errors.count, "error") %> prohibited this program_attendance from being saved:</h2>
+
+      <ul>
+      <% @program_attendance.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :client_id %><br />
+    <%= f.number_field :client_id %>
+  </div>
+  <div class="field">
+    <%= f.label :program_id %><br />
+    <%= f.number_field :program_id %>
+  </div>
+  <div class="field">
+    <%= f.label :atteneded %><br />
+    <%= f.check_box :atteneded %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

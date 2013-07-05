@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @program.name %>
+</p>
+
+<h1><% @program.clients.each do |client| %></h1>
+		<%= client.name %><br>
+			<%= form_for client.program_attendances do |p| %>
+				<%= p.check_box :atteneded %>
+				<%= p.submit "save" %>
+			<% end %>
+		<% end %>
+
+
+
+<%= link_to 'Edit', edit_program_path(@program) %> |
+<%= link_to 'Back', programs_path %>

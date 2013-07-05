@@ -1,0 +1,27 @@
+<h1>Listing program_attendances</h1>
+
+<table>
+  <tr>
+    <th>Client</th>
+    <th>Program</th>
+    <th>Atteneded</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @program_attendances.each do |program_attendance| %>
+  <tr>
+    <td><%= program_attendance.client_id %></td>
+    <td><%= program_attendance.program_id %></td>
+    <td><%= program_attendance.atteneded %></td>
+    <td><%= link_to 'Show', program_attendance %></td>
+    <td><%= link_to 'Edit', edit_program_attendance_path(program_attendance) %></td>
+    <td><%= link_to 'Destroy', program_attendance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Program attendance', new_program_attendance_path %>
