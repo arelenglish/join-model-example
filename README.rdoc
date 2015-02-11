@@ -1,3 +1,9 @@
+==What is this? 
+
+This is a simple totally stock rails app that demonstrates how to set up a complex 
+model relationship and the associated web form. The app has three models, Client, 
+Program, and ProgramAttendance.
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
